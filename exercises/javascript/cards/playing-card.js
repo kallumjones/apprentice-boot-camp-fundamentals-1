@@ -21,13 +21,19 @@ class PlayingCard {
             this.faceValue = (faceValue).toString();
       }
     }
+
+    get stringValue() {
+        return `${this.faceValue} of ${this.suit}`;
+    }
 }
+
 
 // const test = new PlayingCard(1,11);
 
 // console.log(test);
 // console.log(test.suit);
 // console.log(test.faceValue);
+// console.log(test.stringValue);
 
 
 module.exports = PlayingCard;

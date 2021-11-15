@@ -5,28 +5,23 @@ const PlayingCard = require("./playing-card.js");
 
 class PlayingCardsDeck {
   constructor() {
-    
-  }
+     this.deck = []
 
-  getCards() {
-    const result = []
-    const deck = []
-  
-    for (let suit = 0; suit < 4; suit++) {
+     for (let suit = 0; suit < 4; suit++) {
       for (let faceValue = 1; faceValue <= 13; faceValue++) {
         // Create new card
         const playingCard = new PlayingCard(suit, faceValue);
         // Add to the deck
-        deck.push(playingCard);
+        this.deck.push(playingCard);
       }
     }
+  }
 
-    console.log(deck);
-  
+  getCards() {
+    const result = [];
     let cardNumber = 0;
-    for (let card of deck) {
+    for (let card of this.deck) {
       let faceValueName = card.faceValue;
-  
       let suitName = card.suit;
       result[cardNumber] = faceValueName + " of " + suitName;
       cardNumber++;
@@ -37,6 +32,9 @@ class PlayingCardsDeck {
 };
 
 const cards = new PlayingCardsDeck();
+// console.log(PlayingCardsDeck);
+// console.log(cards);
+// console.log(cards.getCards());
 const deckInOrder = cards.getCards();
 for (const card of deckInOrder) {
   console.log(card);
