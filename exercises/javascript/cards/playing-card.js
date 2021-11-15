@@ -1,6 +1,8 @@
+const suits = require('./suits.js').suits;
+
 class PlayingCard {
     constructor (suit, faceValue){
-        this.suit = suit;
+        this.suit = suits[suit];
         this.faceValue = faceValue;
     }
 }
