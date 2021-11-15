@@ -19,14 +19,9 @@ class PlayingCardsDeck {
 
   getCards() {
     const result = [];
-    let cardNumber = 0;
     for (let card of this.deck) {
-      let faceValueName = card.faceValue;
-      let suitName = card.suit;
-      result[cardNumber] = faceValueName + " of " + suitName;
-      cardNumber++;
+      result.push(card.stringValue);
     }
-  
     return result;
   };
 };
