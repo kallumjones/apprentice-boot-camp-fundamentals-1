@@ -1,3 +1,4 @@
+const PlayingCard = require("./playing-card.js");
 // to execute the runnable code in this file, use the command
 // `node cards/cards.js` from the command line positioned at
 // the project's root directory.
@@ -9,7 +10,10 @@ class Cards {
   
     for (let suit = 0; suit < 4; suit++) {
       for (let faceValue = 0; faceValue < 13; faceValue++) {
-        deck.push([suit, faceValue]);
+      // Create new card
+      const playingCard = new PlayingCard(suit, faceValue);
+      // Add to the deck
+      deck.push([playingCard.suit, playingCard.faceValue]);
       }
     }
   
