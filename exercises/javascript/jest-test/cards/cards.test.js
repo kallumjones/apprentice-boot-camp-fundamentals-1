@@ -1,8 +1,8 @@
-const { PlayingCardsDeck } = require('../../cards/cards.js');
+const { PlayingCardDeck } = require('../../cards/playing-card-deck.js');
 
-describe('getCards', function () {
+describe('printCardNames', function () {
   test('get deck in order, return 52 cards correctly formatted', function () {
-    let cards = new PlayingCardsDeck();
+    let cards = new PlayingCardDeck();
     expect(cards.getCards()).toStrictEqual([
       "ace of clubs",
       "2 of clubs",

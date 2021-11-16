@@ -1,8 +1,5 @@
-const suits = {
-    0: 'clubs',
-    1: 'diamonds',
-    2: 'hearts',
-    3: 'spades',
-}
+const Suits = ["clubs", "diamonds", "hearts", "spades"];
 
-module.exports = {suits};
+module.exports = {
+    Suits
+}
