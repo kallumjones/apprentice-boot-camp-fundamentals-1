@@ -23,6 +23,10 @@ class PlayingCard {
         }
     }
 
+    getValue() {
+        return this.faceValue;
+      }
+    
     toString() {
         return `${this.faceValue} of ${this.suit}`;
     }
